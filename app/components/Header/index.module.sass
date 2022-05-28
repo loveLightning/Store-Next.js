@@ -1,0 +1,44 @@
+.container 
+    max-width: 1252px
+    padding: 0px 30px
+    margin: 0 auto
+
+.header 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 25px 0 20px 0
+
+.category 
+    display: flex
+    align-items: center
+    gap: 32px
+
+.link 
+    color: black
+    position: relative
+
+.link::before 
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 0px
+    height: 2px
+    background: black
+    transition: 0.4s ease all
+
+.link:hover::before 
+    content: ''
+    width: 100%
+    height: 2px
+
+.logics 
+    display: flex
+    align-items: center
+    gap: 32px
+
+.line 
+    width: 100%
+    border: 1px solid lightgray
+    margin-bottom: 32px
