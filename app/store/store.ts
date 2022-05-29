@@ -1,10 +1,11 @@
 import { productApi } from './product/product.api';
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from '@reduxjs/toolkit/dist/query';
-import choice from './choice/choice'
+import choiceRange from './choiceRange/choiceRange'
+import choiceRate from './choiceRate/choiceRate';
 
 export const store = configureStore({
-    reducer: { [productApi.reducerPath]: productApi.reducer, setting: choice},
+    reducer: { [productApi.reducerPath]: productApi.reducer, setting: choiceRange, choiceRate: choiceRate},
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(productApi.middleware),
 

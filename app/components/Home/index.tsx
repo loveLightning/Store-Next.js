@@ -1,5 +1,5 @@
 import { useGetProductsQuery } from "../../store/product/product.api";
-import HomeProduct from "./HomeProduct";
+import NewProducts from "./NewProducts";
 import s from "./index.module.sass";
 import Choice from "./Choice";
 import { IProduct } from "../../store/product/product.type";
@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 const Home: React.FC = () => {
   const { data, isLoading, error } = useGetProductsQuery(20);
   const valueRange = useSelector((state: TypeRoorState) => state.setting.firstValue)
+  const valueRadio = useSelector((state: TypeRoorState) => state.choiceRate.value)
   return (
     <div className={s.container}>
       <div className={s.wrapper}>
@@ -26,8 +27,8 @@ const Home: React.FC = () => {
           ) : (
             <div className={s.product}>
               {data?.map((product: IProduct) => {
-                if (product.price >= valueRange[0] && product.price <= valueRange[1]) {
-                  return <HomeProduct key={product.id} product={product} />;
+                if (product.price >= valueRange[0] && product.price <= valueRange[1] && product.rating.rate > valueRadio) {
+                  return <NewProducts key={product.id} product={product} />;
                 }
               })}
             </div>

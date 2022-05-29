@@ -2,9 +2,8 @@ import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
 import React, { useState, useContext } from "react";
 import s from "./index.module.sass";
-import { TypeRoorState } from "../../../../store/store";
 import { useDispatch } from "react-redux";
-import { firstScaleNumber } from "../../../../store/choice/choice";
+import { firstScaleNumber } from "../../../../store/choiceRange/choiceRange";
 
 const firstScale = (value: any) => {
   return `${value[0]}$`;
@@ -24,8 +23,8 @@ const price = {
 };
 
 export const ChoiceRange = () => {
-  const [value, setValue] = useState<number[]>([0, 1000]);
-  const handleChange = (event: Event, newValue: number | number[]) => {
+  const [value, setValue] = useState<any>([0, 1000]);
+  const handleChange = (event: Event, newValue: any) => {
     setValue(newValue as number[]);
     dispath(firstScaleNumber(value))
   };

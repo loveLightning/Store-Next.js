@@ -10,7 +10,7 @@ const initialState: IChoice = {
 }
 
 export const choiceSLice = createSlice({
-    name: 'choice',
+    name: 'choiceRange',
     initialState,
     reducers: {
         firstScaleNumber: (state: { firstValue: number; }, action: PayloadAction<number>) => {
