@@ -25,7 +25,7 @@ const price = {
 export const ChoiceRange = () => {
   const [value, setValue] = useState<any>([0, 1000]);
   const handleChange = (event: Event, newValue: any) => {
-    setValue(newValue as number[]);
+    setValue(newValue);
     dispath(firstScaleNumber(value))
   };
   
