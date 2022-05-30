@@ -1,14 +1,13 @@
 import NewProducts from "../NewProducts";
 import s from "./index.module.sass";
 import Choice from "../Choice";
-import Header from "../../Header";
 import { useGetProductsQuery } from "../../../store/product/product.api";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { TypeRoorState } from "../../../store/store";
 
 
-const Women: React.FC = () => {
+const OtherProducts: React.FC = () => {
   const { data, isLoading, error } = useGetProductsQuery(20);
   const router = useRouter();
   const valueRadio = useSelector((state: TypeRoorState) => state.choiceRate.value)
@@ -19,7 +18,6 @@ const Women: React.FC = () => {
     (state: TypeRoorState) => state.setting.firstValue
   );
   return (
-    <Header>
       <div className={s.container}>
         <div className={s.wrapper}>
           <div className={s.choice}>
@@ -51,8 +49,7 @@ const Women: React.FC = () => {
           </div>
         </div>
       </div>
-    </Header>
   );
 };
 
-export default Women;
+export default OtherProducts;

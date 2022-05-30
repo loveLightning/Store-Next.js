@@ -4,9 +4,6 @@ import Header from "../app/components/Header";
 const HomePage: React.FC = ({ posts }: any) => {
   return (
     <>
-      <Header>
-      <Home />
-      </Header>
     </>
   );
 };
