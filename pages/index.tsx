@@ -1,9 +1,9 @@
-import Home from "../app/components/Home";
-import Header from "../app/components/Header";
+import MainLayout from "../app/components/MainLayout";
 
 const HomePage: React.FC = ({ posts }: any) => {
   return (
     <>
+      <MainLayout children={undefined} />
     </>
   );
 };

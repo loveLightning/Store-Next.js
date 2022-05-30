@@ -1,4 +1,4 @@
-import s from "./index.module.sass";
+import s from "./styled.module.sass";
 
 import { ChoiceRange } from './ChoiceRange'
 import ChoiceRate from './ChoiceRate'

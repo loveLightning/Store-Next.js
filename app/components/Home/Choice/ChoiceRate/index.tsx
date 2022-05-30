@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./index.module.sass";
+import s from "./styled.module.sass";
 import { getValueInput } from '../../../../store/choiceRate/choiceRate'
 import { useDispatch } from "react-redux";
 

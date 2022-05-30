@@ -1,10 +1,9 @@
 import React from "react";
-import OtherProducts from "../app/components/Home/OtherProducts";
+import MainLayout from "../app/components/MainLayout";
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <>
-    </>
+      <MainLayout children={undefined} />
   );
 };
 
