@@ -1,22 +1,19 @@
 import s from "./styled.module.sass";
 import Image from "next/image";
 import logo from "../../../public/img/logo.svg";
-import basket from "../../../public/img/basket.svg";
-import heart from "../../../public/img/heart.svg";
-import user from "../../../public/img/user.svg";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
-import { menu } from "./header.type";
+import React, { useState } from "react";
+import { menu, logics } from "./header.type";
 
 interface IHeader {
   children: React.ReactNode[] | React.ReactNode;
 }
 
-const Header: React.FC<IHeader>= () => {
-    const [activeItem, setActiveItem] = useState<number>();
+const Header: React.FC<IHeader> = () => {
+  const [activeItem, setActiveItem] = useState<number>();
   return (
     <>
-          <div className={s.container}>
+      <div className={s.container}>
         <div className={s.header}>
           <div className={s.logo}>
             <Link href={"/"}>
@@ -46,27 +43,19 @@ const Header: React.FC<IHeader>= () => {
             </ul>
           </div>
           <div className={s.logics}>
-            <Link href={"/"}>
-              <a>
-                <Image priority className={s.image} src={basket}></Image>
-              </a>
-            </Link>
-            <Link href={"/"}>
-              <a>
-                <Image priority className={s.image} src={heart}></Image>
-              </a>
-            </Link>
-            <Link href={"/"}>
-              <a>
-                <Image priority className={s.image} src={user}></Image>
-              </a>
-            </Link>
+            {logics.map((img) => (
+               <Link href={img.href}>
+               <a>
+                 <Image priority className={s.image} src={img.img}></Image>
+               </a>
+             </Link>
+            ))}
           </div>
         </div>
       </div>
       <div className={s.line}></div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

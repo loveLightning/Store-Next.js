@@ -9,6 +9,7 @@ const NewProducts: React.FC<{ product: IProduct }> = ({ product }) => {
     <>
       <div className={s.product}>
         <Image
+        objectFit="contain"
           className={s.image}
           src={product.image}
           height='330px'
