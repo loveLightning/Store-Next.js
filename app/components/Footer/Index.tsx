@@ -9,8 +9,8 @@ const Footer = () => {
       <div className={s.line}></div>
       <ul className={s.social}>
         <li>Don’t missout on once-in-a-while-deals:</li>
-        {social.map((item) => (
-          <li className={s.item}>
+        {social.map((item, id) => (
+          <li key={id} className={s.item}>
             <a
               className={s.link}
               target="_blank"

@@ -43,12 +43,12 @@ const Header: React.FC<IHeader> = () => {
             </ul>
           </div>
           <div className={s.logics}>
-            {logics.map((img) => (
-               <Link href={img.href}>
+            {logics.map((img, id) => (
+               <Link key={id} href={img.href}>
                <a>
                  <Image priority className={s.image} src={img.img}></Image>
                </a>
-             </Link>
+              </Link>
             ))}
           </div>
         </div>
