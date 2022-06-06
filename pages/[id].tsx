@@ -1,12 +1,16 @@
-import React from "react";
+import type { ReactElement } from "react";
 import MainLayout from "../app/components/MainLayout";
+import { Provider } from "react-redux";
+import { store } from "../app/store/store";
 
-const Index: React.FC = () => {
+export default function Index() {
+  return {};
+}
+
+Index.getLayout = function getLayout(page: ReactElement) {
   return (
-      <MainLayout>
-        
-      </MainLayout>
+    <Provider store={store}>
+      <MainLayout>{page}</MainLayout>
+    </Provider>
   );
 };
-
-export default Index;

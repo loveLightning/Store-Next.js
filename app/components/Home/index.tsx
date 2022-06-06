@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 
 const Home: React.FC = () => {
   const { data, isLoading, error } = useGetProductsQuery(20);
+  
   const valueRange = useSelector(
     (state: TypeRoorState) => state.setting.firstValue
   );
@@ -38,4 +39,6 @@ const Home: React.FC = () => {
   );
 };
 
+
 export default Home;
+

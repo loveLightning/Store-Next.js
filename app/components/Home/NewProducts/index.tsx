@@ -1,13 +1,15 @@
 import Image from "next/image";
 import s from "./styled.module.sass";
 import { IProduct } from "../../../store/product/product.type";
+import { useRouter } from "next/router";
 
 const NewProducts: React.FC<{ product: IProduct }> = ({ product }) => {
   const titleProductFirst = product.title.split('')
   const titleProductSecond = titleProductFirst.splice(50, product.title.length -50, '...')
+  const router = useRouter()
   return (
     <>
-      <div className={s.product}>
+      <div onClick={() => router.push(`/details/${product.id}`)} className={s.product}>
         <Image
         objectFit="contain"
           className={s.image}
