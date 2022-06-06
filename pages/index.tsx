@@ -1,13 +1,17 @@
+import { ReactElement } from "react";
 import MainLayout from "../app/components/MainLayout";
+import { Provider } from "react-redux";
+import { store } from "../app/store/store";
 
-const HomePage: React.FC = ({ posts }: any) => {
+export default function HomePage() {
+  return {};
+}
+
+HomePage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <>
-      <MainLayout>
-        
-      </MainLayout>
-    </>
+    <Provider store={store}>
+        <MainLayout>{page}</MainLayout>
+    </Provider>
   );
 };
 
-export default HomePage;

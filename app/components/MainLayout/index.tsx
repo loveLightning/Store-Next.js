@@ -1,16 +1,15 @@
 import Header from "../Header/Header";
-import Home from "../Home";
 import OtherProducts from "../Home/OtherProducts";
 
 interface IHeader {
   children: React.ReactNode[] | React.ReactNode;
 }
 
-const MainLayout: React.FC<IHeader> = ({ children }) => {
+const MainLayout: React.FC<IHeader> = () => {
   return (
     <>
       <Header>
-        
+
       </Header>
       <main>
         <OtherProducts />

@@ -1,6 +1,6 @@
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import s from "./styled.module.sass";
 import { useDispatch } from "react-redux";
 import { firstScaleNumber } from "../../../../store/choiceRange/choiceRange";

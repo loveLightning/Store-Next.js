@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { useState } from "react";
 
 export interface IChoice {
     firstValue: any
