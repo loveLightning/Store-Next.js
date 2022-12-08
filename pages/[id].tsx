@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
-import MainLayout from '../src/components/main-layout/main-layout'
 import { Provider } from 'react-redux'
+import { MainLayout } from 'src/components'
 import { store } from '../src/store/store'
 
 export default function Index() {

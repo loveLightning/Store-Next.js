@@ -19,7 +19,7 @@ export const menuNav: MenuNavTypes[] = [
   {
     id: 0,
     href: '',
-    title: 'All products',
+    title: 'All items',
   },
   {
     id: 1,
