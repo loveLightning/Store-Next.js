@@ -33,6 +33,7 @@ const Description: React.FC<{ products: IProduct[]; routerPath: any }> = ({
             height="16px"
             width="16px"
             priority
+            alt=""
           ></Image>
         </div>
       </div>

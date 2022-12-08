@@ -42,6 +42,7 @@ const Carousel: React.FC<{ products: IProduct[]; routerPath: any }> = ({
               src={img.img}
               objectFit="contain"
               priority
+              alt=""
             ></Image>
           </SwiperSlide>
         ))}
@@ -64,6 +65,7 @@ const Carousel: React.FC<{ products: IProduct[]; routerPath: any }> = ({
               objectFit="contain"
               src={img.img}
               priority
+              alt=""
             ></Image>
           </SwiperSlide>
         ))}

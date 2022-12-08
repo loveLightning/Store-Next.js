@@ -1,10 +1,10 @@
-import type { ReactElement } from "react";
-import MainLayout from "../app/components/MainLayout";
-import { Provider } from "react-redux";
-import { store } from "../app/store/store";
+import type { ReactElement } from 'react'
+import MainLayout from '../src/components/main-layout/main-layout'
+import { Provider } from 'react-redux'
+import { store } from '../src/store/store'
 
 export default function Index() {
-  return {};
+  return {}
 }
 
 Index.getLayout = function getLayout(page: ReactElement) {
@@ -12,5 +12,5 @@ Index.getLayout = function getLayout(page: ReactElement) {
     <Provider store={store}>
       <MainLayout>{page}</MainLayout>
     </Provider>
-  );
-};
+  )
+}

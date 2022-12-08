@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import s from "./styled.module.sass";
 import Image from "next/image";
@@ -14,7 +15,7 @@ const Footer = () => {
             <a
               className={s.link}
               target="_blank"
-              href={item.link}
+              href={item.link} rel="noreferrer"
             >
               <Image src={item.img} height="16px" width="16px"></Image>
             </a>

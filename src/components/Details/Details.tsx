@@ -8,7 +8,6 @@ import Carousel from "./Carousel/Carousel";
 import Description from "./Description/Description";
 import Basket from "./Basket/Basket";
 
-
 const Details: React.FC<{ products: IProduct[] }> = ({ products }) => {
   const router: any = useRouter();
   const routerPath = router.query.id;
@@ -21,7 +20,7 @@ const Details: React.FC<{ products: IProduct[] }> = ({ products }) => {
           </div>
         </div>
         <div className={s['heart-wrapper']}>
-          <Image className={s.heart} src={heart}></Image>
+          <Image className={s.heart} src={heart} alt=""></Image>
         </div>
         <div className={s[s["right-bg"]]}></div>
         <div className={s.container}>

@@ -50,6 +50,7 @@ const Basket: React.FC<{ routerPath: any; products: IProduct[] }> = ({
           width="18px"
           height="18px"
           priority
+          alt=""
         ></Image>
         <div className={s.count}>{count}</div>
         <Image
@@ -59,6 +60,7 @@ const Basket: React.FC<{ routerPath: any; products: IProduct[] }> = ({
           width="18px"
           height="18px"
           priority
+          alt=""
         ></Image>
       </div>
       <div className={s.right}>

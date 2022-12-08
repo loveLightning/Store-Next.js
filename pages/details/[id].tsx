@@ -1,13 +1,13 @@
 import React from 'react'
-import Datails from '../../app/components/Details/Details'
-import { Provider } from "react-redux";
-import { store } from "../../app/store/store";
-import { InferGetStaticPropsType } from 'next';
+import Datails from '../../src/components/Details/Details'
+import { Provider } from 'react-redux'
+import { store } from '../../src/store/store'
+import { InferGetStaticPropsType } from 'next'
 
 const DetailsPage = ({ products }: InferGetStaticPropsType<typeof getServerSideProps>) => {
   return (
     <Provider store={store}>
-    <Datails products={products} />
+      <Datails products={products} />
     </Provider>
   )
 }

@@ -1,4 +1,4 @@
-import "../styles/global.sass";
+import '../styles/global.sass'
 import { ReactElement, ReactNode } from 'react'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
