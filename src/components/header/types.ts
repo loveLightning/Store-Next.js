@@ -23,22 +23,22 @@ export const menuNav: MenuNavTypes[] = [
   },
   {
     id: 1,
-    href: 'men',
+    href: "category/men's clothing",
     title: 'Men',
   },
   {
     id: 2,
-    href: 'women',
+    href: "category/women's clothing",
     title: 'Women',
   },
   {
     id: 3,
-    href: 'jewelery',
+    href: 'category/jewelery',
     title: 'Jewelery',
   },
   {
     id: 4,
-    href: 'electronics',
+    href: 'category/electronics',
     title: 'Electronics',
   },
 ]
@@ -59,7 +59,7 @@ export const menuItem: MenuItemTypes[] = [
   {
     id: '2',
     img: user,
-    href: '/',
+    href: '/cart',
     name: 'user',
   },
 ]

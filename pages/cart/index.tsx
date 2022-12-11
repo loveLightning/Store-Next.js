@@ -1,16 +1,11 @@
 import React from 'react'
-import { Provider } from 'react-redux'
-import { Header } from '../../src/components'
-import Cart from '../../src/components/Cart/Cart'
-import { store } from '../../src/store/store'
+import { Cart, Header } from 'src/components'
 
 const Index: React.FC = () => {
   return (
     <>
-      <Provider store={store}>
-        <Header />
-        <Cart />
-      </Provider>
+      <Header />
+      <Cart />
     </>
   )
 }

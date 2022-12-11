@@ -12,10 +12,10 @@ export const ActiveLink = ({ path, children }: Props) => {
     const router = useRouter()
 
     return (
-        <Link href={path}>
-            <a className={router.asPath === path ? `${s.link} ${s.active}` : `${s.link}`}>
+        <Link href={path} >
+            <a className={router.asPath.replace(/%20/g, ' ') === path ? `${s.link} ${s.active}` : `${s.link}`}>
                 {children}
             </a>
-        </Link>
+        </Link >
     )
 }

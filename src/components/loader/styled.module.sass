@@ -1,0 +1,50 @@
+.wrapper-loader 
+  width: 100vw
+  height: 100vh
+  background-color: #c4c4c44d
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 100
+  
+.lds-ring 
+  display: inline-block
+  width: 80px
+  height: 80px
+
+.lds-ring.fullscreen div 
+  position: fixed
+  top: 40% 
+
+.lds-ring div 
+  display: block
+  position: absolute
+  top: 30%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 64px
+  height: 64px
+  margin: 8px
+  border: 8px solid #4b48ff
+  border-radius: 50%
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite
+  border-color: #4b48ff transparent transparent transparent
+
+.lds-ring div:nth-child(1) 
+  animation-delay: -0.45s
+
+.lds-ring div:nth-child(2) 
+  animation-delay: -0.3s
+
+.lds-ring div:nth-child(3) 
+  animation-delay: -0.15s
+
+@keyframes lds-ring 
+  0% 
+    transform: rotate(0deg)
+  
+  100% 
+    transform: rotate(360deg)
+  

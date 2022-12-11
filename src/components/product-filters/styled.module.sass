@@ -1,0 +1,65 @@
+.wrapper-price 
+    display: flex
+    grid-gap: 74px
+    justify-content: center
+    align-items: center
+    font-size: 12px
+
+.price-range 
+    margin: 32px 0 16px 0
+    font-size: 16px
+    font-weight: bold
+
+.line 
+    margin-top: 32px
+    border: 1px solid 
+    color: lightgray
+
+.wrapper
+    margin-top: 32px
+    
+.input 
+    display: none 
+    
+.btn 
+    display: inline-block
+    width: 48px
+    height: 48px
+    border: 1px solid lightgray
+    border-radius: 8px
+
+.rate 
+    display: flex
+    gap: 12px
+    flex-wrap: wrap
+    align-items: center
+
+.title 
+    font-size: 16px
+    font-weight: 600
+    margin-bottom: 16px
+
+.label
+    position: relative
+    cursor: pointer
+
+.inner 
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 18px
+
+.input:checked + .btn::before
+    content: ''
+    display: block
+    background: lightgray
+    width: 48px
+    height: 48px
+    position: absolute
+    top: 46%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border: 1px solid lightgray
+    border-radius: 8px
